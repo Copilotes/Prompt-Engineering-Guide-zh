@@ -1,18 +1,19 @@
-# Prompt Engineering Guide
+# 提示词工程指南-中文版
 
-Prompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models (LMs) for a wide variety of applications and research topics. Prompt engineering skills help to better understand the capabilities and limitations of large language models (LLMs). Researchers use prompt engineering to improve the capacity of LLMs on a wide range of common and complex tasks such as question answering and arithmetic reasoning. Developers use prompt engineering to design robust and effective prompting techniques that interface with LLMs and other tools.
+本文由PartnerDAO翻译，实践案例更新在《AIGC时代：超级个体的崛起》中，请访问小报童搜索本书
 
-Motivated by the high interest in developing with LLMs, we have created this new prompt engineering guide that contains all the latest papers, learning guides, lectures, references, and tools related to prompt engineering. 
+提示工程是一种相对较新的学科，用于开发和优化提示，以有效地使用语言模型（LM）进行各种应用和研究主题。提示工程技能有助于更好地理解大型语言模型（LLM）的能力和局限性。研究人员使用提示工程来改善LLMs在各种常见和复杂任务上的能力，如问答和算术推理。开发人员使用提示工程来设计与LLMs和其他工具进行交互的稳健而有效的提示技术。
+受到对LLMs开发的高度关注的启发，我们创建了这个新的提示工程指南，其中包含了与提示工程相关的所有最新论文、学习指南、讲座、参考资料和工具。 
 
 Happy Prompting!
 
 ---
 ## Announcements / Updates
 
-- 🔥 We reached #1 on Hacker News on 21 Feb 2023
-- 🎉 The Prompt Engineering Lecture went live [here](https://youtu.be/dOxUroR57xs)
-- 🎓 We're creating a set of comprehensive guides [here](#guides)
-- 📖 New set of deep tutorials coming soon!
+- 🔥我们在2023年2月21日荣登Hacker News排名第一！
+- 🎉 Prompt Engineering讲座已经上线，链接在这里。 [here](https://youtu.be/dOxUroR57xs)
+- 🎓  我们正在创建一套全面的指南，链接在#guides。 [here](#guides)
+- 📖 即将推出一系列深入教程，敬请期待！
 
 [Join our Discord](https://discord.gg/SKgkVT8BGJ)
 
@@ -20,27 +21,27 @@ Happy Prompting!
 
 ---
 
-## Table of Contents
+## 目录
 
-- [Lecture](#lecture)
-- [Guides](#guides)
-- [Papers](#papers)
-- [Tools & Libraries](#tools--libraries)
-- [Datasets](#datasets)
-- [Blog, Guides, Tutorials and Other Readings](#blog-guides-tutorials-and-other-readings)
+- 讲座[Lecture](#lecture)
+- 指南[Guides](#guides)
+- 论文[Papers](#papers)
+- 工具和库[Tools & Libraries](#tools--libraries)
+- 数据集[Datasets](#datasets)
+- 博客、指南、教程和其他阅读材料[Blog, Guides, Tutorials and Other Readings](#blog-guides-tutorials-and-other-readings)
 
 ---
-## Lecture
+## 讲座
 
-We have published a 1 hour lecture that provides a comprehensive overview of prompting techniques, applications, and tools.
+我们已经发布了一篇为期1小时的讲座，提供了提示技术、应用和工具的全面概述。
 - [Video Lecture](https://youtu.be/dOxUroR57xs)
 - [Notebook with code](https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/notebooks/pe-lecture.ipynb)
 - [Slides](https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/lecture/Prompt-Engineering-Lecture-Elvis.pdf)
 
 ---
 
-## Guides
-The following are a set of guides on prompt engineering developed by us. Guides are work in progress.  
+## 指南
+以下是我们开发的一套有关提示工程的指南。指南仍在不断完善中。  
 
 - [Prompt Engineering - Introduction](/guides/prompts-intro.md)
 - [Prompt Engineering - Basic Prompting](/guides/prompts-basic-usage.md)
@@ -49,9 +50,9 @@ The following are a set of guides on prompt engineering developed by us. Guides 
 - [Prompt Engineering - Miscellaneous Topics](/guides/prompt-miscellaneous.md)
 
 ---
-## Papers
+## 论文
 
-The following are the latest papers (sorted by release date) on prompt engineering. We update this on a daily basis and new papers come in. We incorporate summaries of these papers to the guides above every week.
+以下是有关提示工程的最新论文（按发布日期排序）。我们每天都会更新此内容，新论文不断涌现。我们每周会将这些论文的摘要纳入上面的指南中。
 
 - Surveys / Overviews:
 
@@ -150,7 +151,7 @@ The following are the latest papers (sorted by release date) on prompt engineeri
   - [Prompt Papers](https://github.com/thunlp/PromptPapers#papers)
 
 ---
-## Tools & Libraries
+## 工具和库
 #### (Sorted by Name)
 
 - [AI Test Kitchen](https://aitestkitchen.withgoogle.com)
