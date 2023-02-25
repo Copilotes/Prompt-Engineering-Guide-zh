@@ -43,11 +43,11 @@ Happy Prompting!
 ## 指南
 以下是我们开发的一套有关提示工程的指南。指南仍在不断完善中。  
 
-- [Prompt Engineering - Introduction](/guides/prompts-intro.md)
-- [Prompt Engineering - Basic Prompting](/guides/prompts-basic-usage.md)
-- [Prompt Engineering - Advanced Prompting](/guides/prompts-advanced-usage.md)
-- [Prompt Engineering - Adversarial Prompting](/guides/prompt-adversarial.md)
-- [Prompt Engineering - Miscellaneous Topics](/guides/prompt-miscellaneous.md)
+- [提示工程 - 简介](/guides/prompts-intro.md)
+- [提示工程 - 基础提示](/guides/prompts-basic-usage.md)
+- [提示工程 - 高级提示](/guides/prompts-advanced-usage.md)
+- [提示工程 - 对抗提示](/guides/prompt-adversarial.md)
+- [提示工程 - 杂项主题](/guides/prompt-miscellaneous.md)
 
 ---
 ## 论文
@@ -56,10 +56,10 @@ Happy Prompting!
 
 - Surveys / Overviews:
 
-  - [Augmented Language Models: a Survey](https://arxiv.org/abs/2302.07842) (Feb 2023)
-  - [A Survey for In-context Learning](https://arxiv.org/abs/2301.00234) (Dec 2022)
-  - [Towards Reasoning in Large Language Models: A Survey](https://arxiv.org/abs/2212.10403) (Dec 2022)
-  - [Emergent Abilities of Large Language Models](https://arxiv.org/abs/2206.07682) (Jun 2022)
+  - [增强语言模型：一项调查](https://arxiv.org/abs/2302.07842) (Feb 2023)
+  - [上下文学习的调查](https://arxiv.org/abs/2301.00234) (Dec 2022)
+  - [迈向大型语言模型推理：一项调查](https://arxiv.org/abs/2212.10403) (Dec 2022)
+  - [大型语言模型的新兴能力](https://arxiv.org/abs/2206.07682) (Jun 2022)
   - [A Taxonomy of Prompt Modifiers for Text-To-Image Generation](https://arxiv.org/abs/2204.13988) (Apr 2022)
   - [Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing](https://arxiv.org/abs/2107.13586) (Jul 2021)
 - Approaches/Techniques:
