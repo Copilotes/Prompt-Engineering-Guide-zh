@@ -181,77 +181,79 @@ AI:
 当然可以！黑洞是时空中的一些区域，其中的引力非常强大，以至于任何东西，甚至是光，都无法从中逃脱。它们的形成是由于一个非常质量大的恒星死亡时，它的核心向内坍缩，形成了一个无限密度的奇点。奇点的强烈引力将其周围的所有物质和辐射吸引过来，形成了黑洞。
 ```
 
-Our AI research assistant sounds a bit too technical, right? Okay, let's change this behavior and instruct the system to give more accessible answers. 
+我们的 AI 研究助手听起来有点太技术化了，对吧？好的，让我们改变这种行为，指示系统提供更易于理解的答案。
 
 *Prompt:*
 ```
-The following is a conversation with an AI research assistant. The assistant answers should be easy to understand even by primary school students.
+下面是与 AI 研究助手的对话。助手的回答应该易于小学生理解。
 
-Human: Hello, who are you?
-AI: Greeting! I am an AI research assistant. How can I help you today?
-Human: Can you tell me about the creation of black holes?
+Human: 你好，你是谁？
+AI: 您好！我是一名 AI 研究助手。今天我能为您做些什么
+Human:你能告诉我黑洞是如何形成的吗？
 AI: 
 ```
 
 *Output:*
 ```
-Sure! Black holes are created when a very massive star runs out of fuel and collapses in on itself. The gravity of the star is so strong that nothing, not even light, can escape its pull. This creates a point in space-time with an intense gravitational force called a black hole.
+当然可以！黑洞是由于一颗非常质量巨大的恒星燃料用尽后崩塌形成的。这颗恒星的引力非常强大，甚至连光都无法逃脱其引力。这就在时空中创造了一个极强的引力点，称之为黑洞。
 ```
 
-I think we made some progress. You can continue improving it. I am sure if you add more examples you might get even better results. 
+我认为我们已经取得了一些进展。您可以继续改进回答，我相信如果您增加更多的例子，您可能会获得更好的结果。
 
 ---
 
-## Code Generation
-One application where LLMs are quite effective at is code generation. Copilot is a great example of this. There is a vast number of code generation tasks you can perform with clever prompts. Let's look at a few examples below.
+## 代码生成
+语言模型（LLM）在代码生成方面非常有效，例如 Copilot 就是一个很好的例子。通过巧妙的提示，可以执行大量的代码生成任务。下面我们来看几个例子。
 
-First, let's try a simple program that greets the user. 
+首先，我们来尝试一个简单的程序，用于问候用户。
 
 *Prompt:*
 ```
 /*
-Ask the user for their name and say "Hello"
+请用户输入他们的姓名并说“你好”。(备注，此处是翻译原文，在输入单独输入中文时候并不会生成下方代码。只有在联系上下文，chatgpt才会出现下方代买）
 */
 ```
 
 *Output:*
 ```
-let name = prompt("What is your name?");
-console.log(`Hello, ${name}!`);
+name = input("你叫什么名字？ ")
+print("你好，" + name + "！")
+
 ```
 
-You can see that we didn't even need to specify language to use. 
+你可以看到，我们甚至不需要指定要使用的语言。
 
-Let's switch levels a bit. I want to show you how powerful LLMs can be with a little more effort on designing the prompts.
-
+让我们稍微升级一下。我想向您展示，如果我们在设计提示时花费更多的努力，语言模型就有多么强大。
 *Prompt:*
 ```
 """
-Table departments, columns = [DepartmentId, DepartmentName]
-Table students, columns = [DepartmentId, StudentId, StudentName]
-Create a MySQL query for all students in the Computer Science Department
+有一个名为 departments 的表格，它包含两列，分别是 DepartmentId 和 DepartmentName。
+有一个名为 students 的表格，它包含三列，分别是 DepartmentId、StudentId 和 StudentName。
+请创建一个 MySQL 查询语句，用于获取计算机科学系的所有学生。
 """
 ```
 
 *Output:*
 ```
-SELECT StudentId, StudentName 
-FROM students 
-WHERE DepartmentId IN (SELECT DepartmentId FROM departments WHERE DepartmentName = 'Computer Science');
+SELECT students.StudentName
+FROM students
+INNER JOIN departments ON students.DepartmentId = departments.DepartmentId
+WHERE departments.DepartmentName = '计算机科学系'
+
 ```
 
-This is very impressive. In this case we provided data about the database schema and asked it to generate a valid MySQL query. 
+这非常令人印象深刻。在这个例子中，我们提供了关于数据库模式的数据，并要求它生成一个有效的 MySQL 查询语句。
 
 ---
 
-## Reasoning
-Perhaps one of the most difficult tasks for an LLM today is one that requires some form of reasoning. Reasoning is one the areas that I am most excited about due the types of complex applications that can emerge from LLMs. 
+## 推理
+也许对于语言模型（LLM）来说，最困难的任务之一是需要某种形式的推理。由于 LLMs 可以产生各种复杂的应用程序，因此我对推理领域非常感兴趣。
 
-There have been some improvements on tasks involving mathematical capabilities. That said, it's important to note that current LLMs struggle to perform reasoning tasks so this require even more advanced prompt engineering techniques. We will cover these advanced techniques in the next guide. For now, we will cover a few basic examples to show arithmetic capabilities.
+目前在涉及数学能力的任务方面已经取得了一些进展。尽管如此，值得注意的是，当前的 LLMs 难以执行推理任务，因此需要更高级的提示工程技术。我们将在下一个指南中介绍这些高级技术。现在，我们将介绍一些基本的例子，以展示 LLM 的算术能力。
 
 *Prompt:*
 ```
-What is 9,000 * 9,000?
+什么是 9,000 * 9,000?
 ```
 
 *Output:*
@@ -263,37 +265,37 @@ Let's try something more difficult.
 
 *Prompt:*
 ```
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+这个组中的奇数相加得到一个偶数：15、32、5、13、82、7、1。
 
 A: 
 ```
 
 *Output*
 ```
-No, the odd numbers in this group add up to an odd number: 119.
+不对，这个组中的奇数相加得到一个奇数：119。
 ```
 
-That's incorrect! Let's try to improve this by improving the prompt.
+那个回答是不正确的！我们可以尝试通过改进提示来改进回答。
 
 *Prompt:*
 ```
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+这个组中的奇数相加得到一个偶数：15、32、5、13、82、7、1。
 
-Solve by breaking the problem into steps. First, identify the odd numbers, add them, and indicate whether the result is odd or even. 
+通过分步解决问题来解决这个问题。首先，确定奇数，然后将它们加在一起，并指示结果是奇数还是偶数
 ```
 
 *Output:*
 ```
-Odd numbers: 15, 5, 13, 7, 1
-Sum: 41 
-41 is an odd number.
+奇数：15、5、13、7、1。
+总和：41
+41 是一个奇数。
 ```
 
-Much better, right? By the way, I tried this a couple of times and the system sometime fails. If you provide a better instruction combined with examples, it might help get more accurate results.
+非常好，不是吗？顺便说一下，我尝试了几次，有时候系统会失败。如果您提供更好的指示和示例，可能有助于获得更准确的结果。
 
-We will continue to include more examples of common applications in this section of the guide.
+我们将继续在本指南的本节中包含更多常见应用程序的示例。
 
-In the upcoming guides, we will cover even more advanced prompt engineering concepts for improving performance on all these and more difficult tasks.
+在即将发布的指南中，我们将介绍更高级的提示工程概念，以提高在所有这些更困难的任务上的性能。
 
 ---
 
