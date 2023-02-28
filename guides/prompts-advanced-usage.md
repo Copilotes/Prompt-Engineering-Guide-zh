@@ -1,7 +1,7 @@
-# Advanced Prompting
-By this point, it should be obvious that it helps to improve prompts to get better results on different tasks. That's the whole idea behind prompt engineering. 
+# 高级提示工程
+到目前为止，我们已经明确了改进提示有助于获得更好的结果。这就是提示工程的整个理念。
 
-While those examples were fun, let's cover a few concepts more formally before we jump into more advanced concepts. 
+尽管这些例子很有趣，但在我们进入更高级的概念之前，让我们正式地介绍一些概念。
 
 Topics:
 
@@ -14,12 +14,11 @@ Topics:
 - [Automatic Prompt Engineer](#automatic-prompt-engineer-ape)
 
 ---
-## Zero-Shot Prompts
-LLMs today trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We actually tried a few zero-shot examples in the previous section. Here is one of the examples we used:
-
+## 零样本提示
+如今，通过大量数据的训练和指令的优化，语言模型（LLMs）能够执行零样本任务。实际上，在前面的章节中我们尝试了一些零样本示例。以下是我们之前使用过的一个例子：
 *Prompt:*
 ```
-Classify the text into neutral, negative or positive. 
+将文本分类为中性、负面或正面。
 
 Text: I think the vacation is okay.
 Sentiment:
